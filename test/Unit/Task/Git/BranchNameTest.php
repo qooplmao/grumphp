@@ -112,7 +112,7 @@ class BranchNameTest extends AbstractTaskTestCase
             function () {	
                 $this->repository->run('symbolic-ref', ['HEAD', '--short'])->willReturn('feature/other');	
             },	
-            'Matched blacklist rule: feature/other'.PHP_EOL.'Whitelist rule not matched: master'.PHP_EOL.'Matched whitelist rule (IGNORED due to presence in blacklist): feature/*'	
+            'Matched blacklist rule: feature/other'.PHP_EOL.'Whitelist rule not matched: master'.PHP_EOL.'Matched whitelist rule: feature/* (IGNORED due to presence in blacklist)'	
         ];
         yield 'mixed' => [
             [
