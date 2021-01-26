@@ -107,7 +107,7 @@ class BranchName implements TaskInterface
             
             if (preg_match((string) $regex, $name)) {
                 if ($isBlacklisted) {
-                    $errors[] = sprintf('Matched whitelist rule): %s (IGNORED due to presence in blacklist', $rule);
+                    $errors[] = sprintf('Matched whitelist rule: %s (IGNORED due to presence in blacklist)', $rule);
                     
                     continue;
                 }
